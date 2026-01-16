@@ -125,9 +125,9 @@ python ./src/main.py --mode eval \
 评估会生成：`output/.../test_metrics.json`、`classification_report.txt`、`confusion_matrix.png`、Grad-CAM 示例等
 
 > [!IMPORTANT]
-    >
-    > 1. 若不提供 `--best_model`，会使用配置中的 `evaluation.pth_path` 或默认查找 `output/.../best_model.pth`
-    > 2. 评估不同模型时，需要在配置文件中修改 `model.name` 和 `model.kwargs.config_name` 以匹配模型架构
+>
+> 1. 若不提供 `--best_model`，会使用配置中的 `evaluation.pth_path` 或默认查找 `output/.../best_model.pth`
+> 2. 评估不同模型时，需要在配置文件中修改 `model.name` 和 `model.kwargs.config_name` 以匹配模型架构
 
 ### 分析工具
 
