@@ -1,0 +1,56 @@
+                     precision    recall  f1-score   support
+
+             adonis       0.93      1.00      0.96        13
+     american snoot       1.00      1.00      1.00        14
+              an 88       1.00      0.92      0.96        12
+     banded peacock       0.92      0.92      0.92        12
+      beckers white       0.88      0.88      0.88        16
+   black hairstreak       1.00      0.92      0.96        12
+      cabbage white       1.00      0.92      0.96        12
+           chestnut       1.00      0.83      0.91        12
+ clodius parnassian       0.90      0.82      0.86        11
+    clouded sulphur       0.65      1.00      0.79        13
+        copper tail       0.82      0.78      0.80        18
+            crecent       1.00      0.78      0.88         9
+      crimson patch       1.00      1.00      1.00        14
+       eastern coma       0.59      1.00      0.74        13
+        gold banded       0.92      0.86      0.89        14
+       great eggfly       1.00      1.00      1.00        15
+    grey hairstreak       0.69      0.85      0.76        13
+      indra swallow       1.00      0.81      0.90        16
+              julia       1.00      1.00      1.00        16
+       large marble       1.00      1.00      1.00        11
+          malachite       0.93      1.00      0.97        14
+   mangrove skipper       1.00      0.75      0.86        12
+          metalmark       1.00      0.93      0.97        15
+            monarch       1.00      1.00      1.00        11
+      morning cloak       1.00      1.00      1.00        12
+     orange oakleaf       0.87      0.93      0.90        14
+         orange tip       1.00      1.00      1.00        12
+    orchard swallow       0.79      1.00      0.88        11
+       painted lady       0.94      1.00      0.97        15
+         paper kite       0.92      1.00      0.96        12
+            peacock       1.00      1.00      1.00        13
+         pine white       1.00      0.92      0.96        13
+   pipevine swallow       1.00      0.92      0.96        13
+  purple hairstreak       0.85      0.73      0.79        15
+      question mark       1.00      0.47      0.64        15
+        red admiral       0.92      1.00      0.96        12
+ red spotted purple       0.87      1.00      0.93        13
+     scarce swallow       0.95      1.00      0.97        19
+silver spot skipper       0.92      0.92      0.92        13
+     sixspot burnet       0.72      0.93      0.81        14
+            skipper       0.94      0.94      0.94        18
+          sootywing       0.94      0.94      0.94        17
+   southern dogface       1.00      0.54      0.70        13
+     straited queen       0.87      1.00      0.93        13
+ two barred flasher       0.92      1.00      0.96        11
+             ulyses       0.91      1.00      0.95        10
+            viceroy       1.00      0.92      0.96        12
+         wood satyr       1.00      0.93      0.96        14
+yellow swallow tail       1.00      0.87      0.93        15
+    zebra long wing       1.00      1.00      1.00        15
+
+           accuracy                           0.92       672
+          macro avg       0.93      0.92      0.92       672
+       weighted avg       0.93      0.92      0.92       672

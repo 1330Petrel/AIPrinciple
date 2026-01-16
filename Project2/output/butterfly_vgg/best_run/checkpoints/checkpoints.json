@@ -1,0 +1,17 @@
+[
+  {
+    "path": "output\\butterfly_vgg\\test\\checkpoints\\epoch103_val_acc91.2202.pth",
+    "epoch": 103,
+    "metric": 91.2202380952381
+  },
+  {
+    "path": "output\\butterfly_vgg\\test\\checkpoints\\epoch104_val_acc91.2202.pth",
+    "epoch": 104,
+    "metric": 91.2202380952381
+  },
+  {
+    "path": "output\\butterfly_vgg\\test\\checkpoints\\epoch105_val_acc91.0714.pth",
+    "epoch": 105,
+    "metric": 91.07142857142857
+  }
+]

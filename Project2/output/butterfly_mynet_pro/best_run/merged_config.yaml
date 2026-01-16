@@ -1,0 +1,81 @@
+augmentations:
+  color_jitter:
+    brightness: 0.1
+    contrast: 0.1
+    hue: 0.1
+    saturation: 0.1
+  hflip_prob: 0.5
+  random_crop:
+    random_resized_crop: true
+    scale:
+    - 0.8
+    - 1.0
+    size: 224
+  resize: 256
+  rotation_degrees: 15
+  vflip_prob: 0.0
+data:
+  batch_size: 32
+  input_size: 224
+  normalization:
+    mean:
+    - 0.485
+    - 0.456
+    - 0.406
+    std:
+    - 0.229
+    - 0.224
+    - 0.225
+  num_workers: 8
+  root: ./data/raw
+  split_ratios:
+  - 0.7
+  - 0.15
+  - 0.15
+  splits_dir: ./data/splits
+device: cuda
+evaluation:
+  cpkt_path: null
+  topk:
+  - 1
+  - 5
+logging:
+  log_interval: 20
+  use_wandb: false
+model:
+  activation: relu
+  kwargs:
+    config_name: VGG16_small
+    dropout: 0.3
+    init_weights: true
+    normalization: batchnorm
+  name: butterfly_mynet_pro
+  num_classes: 50
+optimizer:
+  lr: 0.001
+  momentum: 0.9
+  name: adamw
+  weight_decay: 0.01
+output_dir: output\butterfly_mynet_pro\mynet_pro
+project_name: ButterflyNet_Classification
+reporting:
+  monitor_metric: val/acc
+  monitor_mode: max
+  save_topk_checkpoints: 3
+run_name: mynet_pro
+scheduler:
+  factor: 0.1
+  gamma: 0.1
+  max_epochs: 60
+  min_lr: 1.0e-06
+  name: cosine
+  patience: 5
+  step_size: 10
+  warmup_epochs: 5
+  warmup_start_factor: 0.1
+seed: 42
+training:
+  early_stop_patience: 10
+  epochs: 60
+  grad_clip: 0.0
+  resume_from: null

@@ -1,0 +1,137 @@
+# ===================================================================
+# Base config: common defaults for all experiments
+# ===================================================================
+
+# -- 全局设置
+# 工程名称
+project_name: "ButterflyNet_Classification"
+# 运行名称，缺省时自动生成年月日时间戳
+run_name: "test"
+# 随机种子
+seed: 42
+# "cuda"或"cpu"
+device: "cuda"
+# 所有实验文件的根输出目录
+output_dir: "./output"
+
+# -- 数据集参数
+data:
+  # 原始图像根目录
+  root: "./data/raw"
+  # train/val/test csv 以及类映射所在目录
+  splits_dir: "./data/splits"
+  # 训练/验证/测试占比，三个浮点数且总和为1
+  split_ratios: [0.7, 0.15, 0.15]
+  # 模型输入尺寸，按 [H, W] 指定
+  input_size: [224, 224]
+  # 归一化均值与方差，长度均需为3
+  normalization:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+  # 单个批次的图像数量
+  batch_size: 32
+  # DataLoader 使用的子进程数量
+  num_workers: 8
+
+# -- 数据增强配置
+augmentations: # 设置为 null 可禁用所有增强
+  # 统一缩放尺寸
+  resize: [256, 256]
+  # 随机裁剪参数，可切换随机缩放裁剪或固定尺寸裁剪
+  random_crop:
+    random_resized_crop: true # true 使用RandomResizedCrop，false 使用RandomCrop
+    size: [224, 224] # Crop后的最终尺寸
+    scale: [0.7, 1.0] # RandomResizedCrop的缩放范围
+    # ratio: [3/4, 4/3] # 如需控制宽高比可取消注释
+  # 水平翻转概率 0~1
+  hflip_prob: 0.5
+  # 垂直翻转概率 0~1
+  vflip_prob: 0.1
+  # 随机旋转角度，支持区间或单值
+  rotation_degrees: 45
+  # 颜色抖动，可设置为 null 禁用
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.1
+
+# -- 模型参数
+model:
+  # 可选: butterfly_vgg / butterfly_resnet / butterfly_mynet / butterfly_mynet_pro
+  name: "butterfly_vgg"
+  # 类别数量，对应数据集
+  num_classes: 50
+  # 激活函数
+  activation: "relu"
+  kwargs:
+    normalization: "batchnorm" # 可选 batchnorm/layernorm/groupnorm/none
+    dropout: 0.5 # 支持单值或[x, y]
+    config_name: "VGG11_small" # VGG/ResNet结构模板
+    init_weights: true # 是否初始化权重
+
+# -- 优化器参数
+optimizer:
+  # 可选: adamw / adam / sgd
+  name: "adamw"
+  # 学习率
+  lr: 0.0005
+  # L2权重衰减
+  weight_decay: 0.01
+  # 只有SGD时会读取
+  momentum: 0.9
+
+# -- 学习率调度器参数
+scheduler:
+  # 可选: none/step/cosine/exp/reduce_on_plateau
+  name: "cosine"
+  # StepLR时的周期
+  step_size: 10
+  # Step/Exp衰减率
+  gamma: 0.1
+  # Cosine或WarmupCosine需要指定的总epoch
+  max_epochs: 120
+  # Cosine与ReduceOnPlateau的最小学习率
+  min_lr: 3.e-7
+  # ReduceOnPlateau衰减因子
+  factor: 0.1
+  # ReduceOnPlateau的耐心轮数
+  patience: 5
+  # 预热轮数
+  warmup_epochs: 5
+  # 预热起始缩放，0~1
+  warmup_start_factor: 0.1
+
+# -- 训练参数
+training:
+  # 总训练轮数
+  epochs: 120
+  # 早停耐心值
+  early_stop_patience: 15
+  # 梯度裁剪阈值，为0时禁用
+  grad_clip: 0.0
+  # 指定checkpoint路径以恢复训练
+  resume_from: null
+
+# -- 评估与报告
+reporting:
+  # 选择监控的验证指标，字符串
+  monitor_metric: "val/acc"
+  # 指标越大越好填"max"，越小越好填"min"
+  monitor_mode: "max"
+  # 保留Top-K个最好checkpoint
+  save_topk_checkpoints: 3
+
+# 评估配置
+evaluation:
+  # 计算Top-K准确率
+  topk: [1, 5]
+  # 指定评估使用的模型权重路径
+  pth_path: null
+
+# -- 日志
+logging:
+  # 是否启用Weights & Biases
+  use_wandb: false
+  # 每隔多少个batch打印一次训练日志
+  log_interval: 20

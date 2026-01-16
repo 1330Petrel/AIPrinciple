@@ -1,0 +1,64 @@
+=======================================
+      Data Split Statistical Report    
+=======================================
+
+--- Class Distribution Analysis ---
+Sample counts per class across splits:
+                     Train  Validation  Test  Total
+label                                              
+adonis                  61          13    13     87
+american snoot          67          14    14     95
+an 88                   58          13    12     83
+banded peacock          58          12    12     82
+beckers white           73          16    16    105
+black hairstreak        57          12    12     81
+cabbage white           59          12    12     83
+chestnut                57          12    12     81
+clodius parnassian      49          10    11     70
+clouded sulphur         60          13    13     86
+copper tail             85          18    18    121
+crecent                 42           9     9     60
+crimson patch           65          14    14     93
+eastern coma            61          13    13     87
+gold banded             66          14    14     94
+great eggfly            70          15    15    100
+grey hairstreak         63          13    13     89
+indra swallow           72          16    16    104
+julia                   72          16    16    104
+large marble            50          11    11     72
+malachite               66          14    14     94
+mangrove skipper        57          12    12     81
+metalmark               68          15    15     98
+monarch                 50          11    11     72
+morning cloak           57          12    12     81
+orange oakleaf          63          13    14     90
+orange tip              57          12    12     81
+orchard swallow         51          11    11     73
+painted lady            71          15    15    101
+paper kite              58          13    12     83
+peacock                 62          13    13     88
+pine white              61          13    13     87
+pipevine swallow        59          13    13     85
+purple hairstreak       72          15    15    102
+question mark           69          15    15     99
+red admiral             58          12    12     82
+red spotted purple      60          13    13     86
+scarce swallow          88          19    19    126
+silver spot skipper     59          13    13     85
+sixspot burnet          63          14    14     91
+skipper                 86          19    18    123
+sootywing               82          17    17    116
+southern dogface        59          13    13     85
+straited queen          61          13    13     87
+two barred flasher      52          11    11     74
+ulyses                  45          10    10     65
+viceroy                 56          12    12     80
+wood satyr              64          14    14     92
+yellow swallow tail     68          14    15     97
+zebra long wing         68          15    15     98
+
+--- Summary ---
+Total Unique Classes: 50
+Training Set Size:    3135
+Validation Set Size:  672
+Test Set Size:        672

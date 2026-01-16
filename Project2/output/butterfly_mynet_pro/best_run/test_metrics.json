@@ -1,0 +1,13 @@
+{
+  "accuracy_top1": 0.8557,
+  "accuracy_top5": 0.9673,
+  "precision_macro": 0.8634,
+  "recall_macro": 0.8537,
+  "f1_score_macro": 0.8554,
+  "precision_micro": 0.8557,
+  "recall_micro": 0.8557,
+  "f1_score_micro": 0.8557,
+  "precision_weighted": 0.8624,
+  "recall_weighted": 0.8557,
+  "f1_score_weighted": 0.856
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "path": "output\\butterfly_mynet_pro\\mynet_pro\\checkpoints\\epoch53.pth",
+    "epoch": 53,
+    "metric": 85.56547619047619
+  },
+  {
+    "path": "output\\butterfly_mynet_pro\\mynet_pro\\checkpoints\\epoch60.pth",
+    "epoch": 60,
+    "metric": 85.11904761904762
+  },
+  {
+    "path": "output\\butterfly_mynet_pro\\mynet_pro\\checkpoints\\epoch48.pth",
+    "epoch": 48,
+    "metric": 84.9702380952381
+  }
+]

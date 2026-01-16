@@ -1,0 +1,17 @@
+[
+  {
+    "path": "output\\butterfly_resnet\\dropout0.5_resnet10\\checkpoints\\epoch94_val_acc88.8393.pth",
+    "epoch": 94,
+    "metric": 88.83928571428571
+  },
+  {
+    "path": "output\\butterfly_resnet\\dropout0.5_resnet10\\checkpoints\\epoch98_val_acc88.6905.pth",
+    "epoch": 98,
+    "metric": 88.69047619047619
+  },
+  {
+    "path": "output\\butterfly_resnet\\dropout0.5_resnet10\\checkpoints\\epoch95_val_acc88.5417.pth",
+    "epoch": 95,
+    "metric": 88.54166666666667
+  }
+]
